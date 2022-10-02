@@ -1,5 +1,6 @@
 [package]
-name = "cuda-finder"
+name = "romc-finder"
+publish = false
 version = "0.0.0"
 authors = ["Aster <192607617@qq.com>"]
 description = "..."
@@ -10,7 +11,6 @@ license = "MPL-2.0"
 edition = "2021"
 
 [dependencies]
-tracing = "0.1.37"
 
 [dev-dependencies]
 
