@@ -11,6 +11,7 @@ edition = "2021"
 
 [dependencies]
 tracing = "0.1.37"
+semver = "1.0.17"
 
 [dev-dependencies]
 
