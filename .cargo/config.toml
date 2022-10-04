@@ -1,0 +1,15 @@
+[env]
+VSLANG = "1033"
+RUST_LOG = "off,waifu_diffuser=trace"
+CUDNN_STATIC = "true"
+CUDNN_LIB_DIR = "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\lib\\x64"
+CUDNN_INCLUDE_DIR = "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\include"
+
+#[build]
+#rustflags = ["--cfg=web_sys_unstable_apis"]
+
+#[target.wasm32-unknown-unknown]
+#rustflags = [
+#    "--cfg=web_sys_unstable_apis",
+#    "-C", "link-args=-z stack-size=15000000",
+#]

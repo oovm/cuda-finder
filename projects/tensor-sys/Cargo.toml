@@ -9,11 +9,22 @@ readme = "Readme.md"
 license = "MPL-2.0"
 edition = "2021"
 
+
 [dependencies]
-bindgen = "0.64.0"
-tracing = "0.1.37"
+libc = "0.2.140"
+pkg-config = "0.3.26"
 
 [dev-dependencies]
 
+
+#
+#[build-dependencies.cuda-finder]
+##version = "0.0.0"
+#bindgen = "0.64.0"
+#path = "../cuda-finder"
+
+
+
 [features]
 default = []
+dynamic-link = []
