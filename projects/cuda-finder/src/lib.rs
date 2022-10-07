@@ -6,7 +6,7 @@ mod errors;
 mod cu_tools;
 
 #[derive(Default)]
-pub struct CudaFinder {
+pub struct CuToolsFinder {
     cuda: BTreeMap<Version, CudaVersionInfo>,
 }
 

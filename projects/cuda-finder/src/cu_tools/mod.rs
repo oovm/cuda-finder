@@ -3,7 +3,7 @@ use std::fs::read_dir;
 use std::path::{Path, PathBuf};
 use semver::Version;
 
-use crate::CudaFinder;
+use crate::CuToolsFinder;
 
 mod cuda;
 mod cudnn;
