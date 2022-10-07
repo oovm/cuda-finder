@@ -12,19 +12,26 @@ edition = "2021"
 
 [dependencies]
 libc = "0.2.140"
-pkg-config = "0.3.26"
+
 
 [dev-dependencies]
 
+[build-dependencies.cuda-finder]
+#version = "0.0.0"
+path = "../cuda-finder"
+optional = true
 
-#
-#[build-dependencies.cuda-finder]
-##version = "0.0.0"
-#bindgen = "0.64.0"
-#path = "../cuda-finder"
-
-
+[build-dependencies.rocm-finder]
+#version = "0.0.0"
+path = "../rocm-finder"
+optional = true
 
 [features]
 default = []
+cuda = ["cuda-finder"]
+cudnn = ["cuda-finder"]
+tensorrt = ["cuda-finder"]
+cublas = ["cuda-finder"]
+rocm = []
+opencl = []
 dynamic-link = []

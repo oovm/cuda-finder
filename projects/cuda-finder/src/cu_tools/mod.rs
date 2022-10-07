@@ -17,6 +17,7 @@ pub struct CudaVersionInfo {
 
 pub struct CudnnVersionInfo {
     version: Version,
+    path: PathBuf
 }
 
 pub struct CublasVersionInfo {}

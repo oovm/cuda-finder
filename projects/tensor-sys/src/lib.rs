@@ -1,6 +1,3 @@
-extern crate libc;
-extern crate rcudnn as cudnn;
-
 use cudnn::{Cudnn, TensorDescriptor};
 use cudnn::utils::{DataType, ScalParams};
 
