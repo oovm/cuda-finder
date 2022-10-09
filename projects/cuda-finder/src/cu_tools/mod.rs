@@ -1,23 +1,24 @@
-use std::env::VarError;
-use std::fs::read_dir;
-use std::path::{Path, PathBuf};
-use semver::Version;
-
 use crate::CuToolsFinder;
+use semver::Version;
+use std::{
+    env::VarError,
+    fs::read_dir,
+    path::{Path, PathBuf},
+};
 
 mod cuda;
 mod cudnn;
 
-
-#[derive(Copy, Clone)]
+#[derive(Clone, Debug)]
 pub struct CudaVersionInfo {
     version: Version,
     path: PathBuf,
 }
 
+#[derive(Clone, Debug)]
 pub struct CudnnVersionInfo {
     version: Version,
-    path: PathBuf
+    path: PathBuf,
 }
 
 pub struct CublasVersionInfo {}

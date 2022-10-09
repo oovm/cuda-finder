@@ -1,10 +1,7 @@
-use std::fs::read_dir;
-use std::path::{Path, PathBuf};
-use crate::{CuToolsFinder, CudaVersionInfo};
+use super::*;
 
 pub const CUDA_DEFAULT_WIN: &str = "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\";
 pub const CUDA_DEFAULT_LINUX: &str = "/usr/local/cuda/";
-
 
 impl CuToolsFinder {
     pub fn search_cuda(&mut self) {

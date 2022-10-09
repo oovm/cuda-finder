@@ -1,13 +1,17 @@
-use std::collections::BTreeMap;
-use semver::Version;
 pub use errors::{Error, Result};
+use semver::Version;
+use std::collections::BTreeMap;
 
-mod errors;
 mod cu_tools;
+mod errors;
 
 #[derive(Default)]
 pub struct CuToolsFinder {
     cuda: BTreeMap<Version, CudaVersionInfo>,
+    cudnn: BTreeMap<Version, CudnnVersionInfo>,
 }
 
-pub use crate::cu_tools::{CudaVersionInfo, CudnnVersionInfo, CublasVersionInfo, CufftVersionInfo, CusolverVersionInfo, CusparseVersionInfo, NppVersionInfo};
+pub use crate::cu_tools::{
+    CublasVersionInfo, CudaVersionInfo, CudnnVersionInfo, CufftVersionInfo, CusolverVersionInfo, CusparseVersionInfo,
+    NppVersionInfo,
+};

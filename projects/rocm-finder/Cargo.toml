@@ -1,6 +1,5 @@
 [package]
-name = "romc-finder"
-publish = false
+name = "rocm-finder"
 version = "0.0.0"
 authors = ["Aster <192607617@qq.com>"]
 description = "..."

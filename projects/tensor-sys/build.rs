@@ -1,7 +1,5 @@
 use std::env;
 
-use pkg_config;
-
 fn main() {
     let lib_dir = env::var("CUDNN_LIB_DIR").ok();
     let include_dir = env::var("CUDNN_INCLUDE_DIR").ok();
@@ -11,11 +9,7 @@ fn main() {
         Some(ref v) => v.split(':').collect(),
         None => vec!["cudnn", "cudart", "cuda"],
     };
-    let mode = if cfg!( feature = "dynamic-link" ) {
-        "dylib"
-    } else {
-        "static"
-    };
+    let mode = if cfg!(feature = "dynamic-link") { "dylib" } else { "static" };
     if let Some(lib_dir) = lib_dir {
         println!("cargo:rustc-link-search=native={}", lib_dir);
     }
@@ -64,8 +58,6 @@ fn main() {
             .expect("Unable to generate bindings");
 
         let out_path = PathBuf::from("src").join("generated.rs");
-        bindings
-            .write_to_file(out_path)
-            .expect("Couldn't write bindings!");
+        bindings.write_to_file(out_path).expect("Couldn't write bindings!");
     }
 }
